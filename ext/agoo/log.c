@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/types.h>
@@ -24,6 +25,11 @@
 #define NOTIFIED	2
 #define RESET_COLOR	"\033[0m"
 #define RESET_SIZE	4
+
+struct timezone {
+    int tz_minuteswest;     /* minutes west of Greenwich */
+    int tz_dsttime;         /* type of DST correction */
+};
 
 static struct _Color	colors[] = {
     { .name = "black",      .ansi = "\033[30;1m" },
